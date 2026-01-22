@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Intelligent IT Service Desk</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            background: #ffffff;
+            width: 480px;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+            animation: fadeIn 0.8s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        p.subtitle {
+            text-align: center;
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 25px;
+        }
+
+        label {
+            font-weight: 600;
+            color: #444;
+        }
+
+        textarea {
+            width: 100%;
+            height: 110px;
+            margin-top: 8px;
+            padding: 12px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+            resize: none;
+        }
+
+        textarea:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 5px rgba(102, 126, 234, 0.5);
+        }
+
+        button {
+            width: 100%;
+            margin-top: 20px;
+            padding: 12px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .result-box {
+            margin-top: 25px;
+            padding: 15px;
+            background: #f4f6ff;
+            border-left: 5px solid #667eea;
+            border-radius: 6px;
+            text-align: center;
+        }
+
+        .result-title {
+            font-size: 14px;
+            color: #555;
+        }
+
+        .result-value {
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+            margin-top: 5px;
+        }
+
+        footer {
+            margin-top: 25px;
+            text-align: center;
+            font-size: 12px;
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>IT Service Desk AI</h1>
+        <p class="subtitle">Automatic Ticket Categorization System</p>
+
+        <form method="POST">
+            <label>Ticket Description</label>
+            <textarea name="ticket_text" placeholder="Example: VPN not working from home" required></textarea>
+
+            <button type="submit">Predict Ticket Category</button>
+        </form>
+
+        {% if prediction %}
+        <div class="result-box">
+            <div class="result-title">Predicted Category</div>
+            <div class="result-value">{{ prediction }}</div>
+        </div>
+        {% endif %}
+
+        <footer>
+            Powered by Machine Learning · Flask · Python
+        </footer>
+    </div>
+
+</body>
+</html>

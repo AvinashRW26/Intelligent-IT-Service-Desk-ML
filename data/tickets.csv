@@ -1,0 +1,25 @@
+ticket_text,category
+Outlook not opening,Email Issue
+Email not syncing on mobile,Email Issue
+Unable to send email attachments,Email Issue
+Mailbox is full,Email Issue
+Email bouncing back,Email Issue
+VPN not connecting from home,VPN Issue
+VPN disconnects frequently,VPN Issue
+Unable to login to VPN,VPN Issue
+VPN client throwing error,VPN Issue
+Remote access VPN issue,VPN Issue
+Laptop not turning on,Hardware Issue
+Keyboard keys not working,Hardware Issue
+Mouse not detected,Hardware Issue
+System overheating,Hardware Issue
+Blue screen error,Hardware Issue
+User account locked,Access Issue
+Password expired,Access Issue
+Unable to login to system,Access Issue
+Access denied error,Access Issue
+Account disabled,Access Issue
+Printer not working,Printer Issue
+Unable to print documents,Printer Issue
+Printer offline,Printer Issue
+Printer driver missing,Printer Issue
